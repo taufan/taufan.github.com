@@ -15,7 +15,6 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/touch-icon-iphone-114.png" />
 	<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/touch-icon-ipad-144.png" />
 	
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700">
     <link rel="stylesheet" href="/assets/stylesheets/styles.css?v=0">
     <link rel="stylesheet" href="/assets/stylesheets/styles/tomorrow-night.css">
 
@@ -30,6 +29,7 @@
     <script type="text/javascript">
       (function(c,b){var a,d,h,e;a=c.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===c.location.protocol?"https:":"http:")+'//api.mixpanel.com/site_media/js/api/mixpanel.2.js';d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(a,d);b._i=[];b.init=function(a,c,f){function d(a,b){var c=b.split(".");2==c.length&&(a=a[c[0]],b=c[1]);a[b]=function(){a.push([b].concat(Array.prototype.slice.call(arguments,0)))}}var g=b;"undefined"!==typeof f?g=b[f]=[]:f="mixpanel";g.people=g.people||[];h="disable track track_pageview track_links track_forms register register_once unregister identify name_tag set_config people.set people.increment".split(" ");for(e=0;e<h.length;e++)d(g,h[e]);b._i.push([a,c,f])};window.mixpanel=b})(document,window.mixpanel||[]);
       mixpanel.init("270c1ffa2b93a742ddcfba9097490da8");
+      mixpanel.track("Home");
 	</script>
 	<!-- end Mixpanel -->
 	
@@ -54,23 +54,22 @@
 	</script>
   </head>
   <body>
-  	<div id="fb-root"></div>
   	<div class="header-top"></div>
     <div class="wrapper">
       <header>
         <a href="http://taufan.github.com/"><h1 class="logo">TΛ</h1></a>
         <p>Love coffee, work at <a href="http://getilo.com">Idealounge</a></p>
-        <p>
-        <iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=taufan&type=follow&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="165px" height="20px"></iframe>
-  		<br/>
-        <a href="https://twitter.com/taero_" class="twitter-follow-button" data-show-count="false">Follow @taero_</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        <p class="follow-me">
+          <iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=taufan&type=follow&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="165px" height="20px"></iframe>
+  		  <br/>
+          <a href="https://twitter.com/taero_" class="twitter-follow-button" data-show-count="false">Follow @taero_</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         </p>
         <ul class="tags">
         {% for tag in page.tags %}
           <li><a href="/tags/{{ tag }}">{{ tag }}</a></li>
         {% endfor %}
-      </ul>
+        </ul>
       </header>
 
       {{ content }}
